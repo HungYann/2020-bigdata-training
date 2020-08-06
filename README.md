@@ -9,4 +9,4 @@ homework:
 4. 下周一10点前提将pr发我
 
 注意:
-1. 运用之前所学的知识, 如linux, vim, git, 代码规范等
+1. 运用之前所学的知识, 如linux, vim, git, 代码规范 等
