@@ -1,0 +1,35 @@
+//1. 包中直接写方法，或者定义变量，就错误->使用包对象来解决
+//2. 每个包都可以有一个包对象，需要在父包(com.atguigu)中定义它，且名称与子包一样
+
+
+package com.atguigu{
+  package object scala{
+      
+    var name = "jack"
+    def sayOk():Unit={
+        println("package object sayOk!")
+    }
+
+  }
+  
+
+  package scala{
+      class Test{
+          def test():Unit={
+              //这里的name就是包对象中声明的name
+              println(name)
+              sayOk()
+          }
+      }
+
+      object TestObj{
+          def main(args:Array[String]):Unit = {
+              val t = new Test()
+              t.test()
+              //因为TestObj和scala 这个包位于同一个包，因此也可以使用
+              println("name"+name)
+          }
+      }
+  }
+
+}

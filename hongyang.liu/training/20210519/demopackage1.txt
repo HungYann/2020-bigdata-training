@@ -1,0 +1,40 @@
+
+
+//第一种
+package com.atguigus.scala 
+class Person{
+    val name = "nick"
+    def play(message:String):Unit={
+      println(this.name+" "+message)
+    }
+}
+
+
+//第二种
+
+
+package com.atguigu
+package scala 
+
+
+
+class Person{
+    val name = "Nick"
+    def play(message:String):Unit={
+      println(this.name+" "+message)
+    }
+
+}
+
+//第三种
+
+
+package com.guigu{
+     package scala{
+        class Person{
+              val name = "Nick"
+              def play(message:String):Unit={
+              println(this.name+" "+message)
+     }
+   }
+}

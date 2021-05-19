@@ -1,0 +1,42 @@
+pakcage com.atguigu{
+  //这个类就是在com.atguigu包下
+  class User{
+      
+  }
+
+  //这个类对象就是在monster$，也在com.atguigu包下
+  object Monster{
+  
+  }
+
+  class Dog{
+
+  }
+
+  pakcage scala{
+     //这个类就是在com.atguigu.scala包下
+     class User{
+     }
+
+     //这个Test类对象
+     object Test{
+        def main(args:Array[String]):Unit={
+            //子类可以直接访问父类的内容
+            var dog = new Dog
+            println("dog="+dog)
+
+            //在子包和父包类重名时，默认采用就近原则
+            var u = new User()
+            println("u"+u)
+            //在子包和父包类重名时，如果希望指定使用某个类，则带上包路径
+            var u2 = new com.atguigu.User()
+            println("u2"+u2)
+        }
+     }
+
+  }
+
+
+
+
+}
